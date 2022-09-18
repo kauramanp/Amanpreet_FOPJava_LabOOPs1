@@ -12,31 +12,32 @@ public class EmployeeCredentials {
 
 	public String GenerateEmail(String department)
 	{
-		String email = emp.getFirstName()+emp.getLastName()+"@"+department+"."+emp.getCompanyName()+"."+"com";
+		String email = emp.getFirstName()+emp.getLastName()+"@"+department+".abc.com";
 		return email;
 	}
 	public void showCredentails(String department) {
 		System.out.println("Dear "+emp.getFirstName()+" your generated credentials are as follows ");
-		System.out.println("Email -->"+ GenerateEmail(department));
-		System.out.println("Password -->"+generatePassword());
+		System.out.println("Email --> "+ GenerateEmail(department));
+		System.out.println("Password --> "+generatePassword());
 		
 	}
 	
 	public String generatePassword() {
-		  String[] charCategories = new String[] {
-		            "abcdefghijklmnopqrstuvwxyz",
-		            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-		            "0123456789", "@#$%"
-		   
-		    };
+		 
+		  String lowerCase =  "abcdefghijklmnopqrstuvwxyz";
+		  String upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM";
+		  String numbers = "1234567890";
+		  String specialCase = "@#$%&";
+		  String completeCases = lowerCase+upperCase+numbers+specialCase;
 		 
 		  StringBuilder password = new StringBuilder(8);
 	        Random random = new Random(System.nanoTime());
-
-	        for (int i = 0; i < 8; i++) {
-	            String charCategory = charCategories[random.nextInt(charCategories.length)];
-	            int position = random.nextInt(charCategory.length());
-	            password.append(charCategory.charAt(position));
+	        password.append(lowerCase.charAt(random.nextInt(lowerCase.length())));
+	        password.append(upperCase.charAt(random.nextInt(upperCase.length())));
+	        password.append(numbers.charAt(random.nextInt(numbers.length())));
+	        password.append(specialCase.charAt(random.nextInt(specialCase.length())));
+	        for (int i = 0; i < 4; i++) {
+	            password.append(completeCases.charAt(random.nextInt(completeCases.length())));
 	        }
 
 	        return new String(password);
