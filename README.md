@@ -4,13 +4,16 @@ Output of the code
 
 Please enter your first Name
 john
+
 Please enter your last Name
 doe
+
 Select your department 
 1. Technical 
 2. Admin 
 3. Human Resources 
 4. Legal
+4
 
 
 
