@@ -11,7 +11,7 @@ Select your department
 2. Admin 
 3. Human Resources 
 4. Legal
-4
+
 Dear john your generated credentials are as follows 
 Email --> johndoe@legal.abc.com
 Password --> yT7@k2qz
