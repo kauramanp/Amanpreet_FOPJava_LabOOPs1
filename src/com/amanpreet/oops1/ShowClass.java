@@ -14,7 +14,7 @@ public class ShowClass {
 		
 		Employee emp = new Employee(firstName, lastName);
 		
-		System.out.println("Select your department \n1. Technical \n2. Admin \n 3.Human Resources \n4. Legal");
+		System.out.println("Select your department \n1. Technical \n2. Admin \n3. Human Resources \n4. Legal");
 		int department = sc.nextInt();
 		
 		EmployeeCredentials empCredentials = new EmployeeCredentials(emp);
